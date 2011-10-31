@@ -190,6 +190,10 @@ public class Ruler extends JFrame {
             }
         });
     }
+    public void setSize(int w, int h) {
+        super.setSize(w, h);
+        System.out.println("w="+w+" h="+h);
+    }
 
     int initialWidth;
 
