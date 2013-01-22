@@ -183,9 +183,10 @@ public class Ruler extends JFrame {
         dragerLabel.addMouseMotionListener(new MouseMotionAdapter() {
             public void mouseDragged(MouseEvent e) {
                 if (isHorisontal) {
-                    setSize(initialWidth + e.getX(), rulerHeight);
+
+                    setSize(getSize().width + e.getX(), rulerHeight);
                 } else {
-                    setSize(rulerHeight, initialHeight + e.getY());
+                    setSize(rulerHeight, getSize().height + e.getY());
                 }
             }
         });
